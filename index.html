@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <nav>
+        <div class="invisiable"><h1>invisibile</h1></div>
+        <div class="sidenav">
+          <i class="fa-sharp-duotone fa-solid fa-sun"></i>
+          <div class="toggle active"><div></div></div>
+          <i class="fa-solid fa-moon"></i>
+        </div>
+      </nav>
+      <main>
+        <div class="left">
+          <h3>Welcome to the</h3>
+          <h3><b>Frontend Quiz!</b></h3>
+          <p class="minip">Pick a subject to get started.</p>
+        </div>
+        <div class="right">
+          <a href="src/templates/html.html">
+            <div class="subject">
+              <div class="icon">
+                <i class="fa-brands fa-html5"></i>
+              </div>
+              <h3>HTML</h3>
+            </div>
+          </a>
+          <a href="src/templates/css.html">
+            <div class="subject">
+              <div class="icon"><i class="fa-brands fa-css"></i></div>
+              <h3>CSS</h3>
+            </div>
+          </a>
+          <a href="src/templates/js.html">
+            <div class="subject">
+              <div class="icon"><i class="fa-brands fa-js"></i></div>
+              <h3>Javascript</h3>
+            </div>
+          </a>
+          <a href="src/templates/sass.html">
+            <div class="subject">
+              <div class="icon"><i class="fa-brands fa-sass"></i></div>
+              <h3>SASS</h3>
+            </div>
+          </a>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
