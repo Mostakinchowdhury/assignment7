@@ -26,7 +26,6 @@ function loadedfunc() {
   } else {
     curid = randomind()
     qfield.textContent = htmlquestion[curid].question
-    qn.textContent = serial
     htmlquestion[curid].options.forEach((e, i) => {
       hoptions[i].textContent = e
     })
@@ -34,13 +33,18 @@ function loadedfunc() {
   range.style.backgroundImage = `linear-gradient(to right, #a627f3 0% ${serial * 10}%, #3c4d67 ${
     serial * 10
   }% 100%)`
+  qn.textContent = serial
   serial++
 }
 function handlesubmit(e) {
   e.preventDefault()
-  let origionalanswer = htmlquestion[curid].answer
   let formdata = new FormData(this)
   let selectedAnswer = htmlquestion[curid].options[formdata.get('quiz')]
+  if (!selectedAnswer) {
+    alert("You don't select any option.select your choice first to go the next question")
+    return
+  }
+  let origionalanswer = htmlquestion[curid].answer
   if (selectedAnswer == origionalanswer) {
     score++
   }
